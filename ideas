@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Ideas</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="navbar">
-        <h2>Ashan Jeevanathan</h2>
+        <h2>Your Name</h2>
         <nav>
             <ul>
                 <li><a href="./index.html">Home</a></li>
@@ -17,7 +17,7 @@
                 <li><a href="./bookshelf.html">Bookshelf</a></li>
                 <li><a href="./advice.html">Advice</a></li>
                 <li><a href="./interests.html">interests</a></li>
-                <li><a href="./"></a></li>
+                <li><a href="./ideas"></a>Ideas</li>
                 <li><a href="./"></a></li>
                 <li><a href="./"></a></li>
             </ul>
@@ -25,8 +25,8 @@
     </div>
     <div class="content">
         <section id="about">
-            <h1>Coming soon</h1>
-            <p></p>
+            <h1>My Ideas for this world</h1>
+            <p>Write a brief introduction about yourself. Include your background, interests, and what you do.</p>
         </section>
     </div>
 </body>

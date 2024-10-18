@@ -3,31 +3,35 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    
+    flex-direction: column;
 }
 
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px;
-    height: 100%;
-    padding: 20px;
+    width: 100%;
+    padding: 10px;
     box-sizing: border-box;
+    background-color: #f8f8f8;
+    z-index: 1000;
 }
 
 .navbar h2 {
     text-align: center;
-    margin: 0 0 20px;
+    margin: 0 0 10px;
 }
 
 .navbar nav ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .navbar nav ul li {
-    margin: 10px 0;
+    margin: 5px 10px;
 }
 
 .navbar nav ul li a {
@@ -40,7 +44,7 @@ body {
 }
 
 .content {
-    margin-left: 220px;
+    margin-top: 150px;
     padding: 20px;
     flex: 1;
 }
@@ -60,17 +64,16 @@ p {
 }
 
 ul {
-    padding: 0;
+    padding: 0 0 0 20px;
     list-style-type: disc;
 }
 
 li {
     margin: 10px 0;
-text-decoration: dotted;
+    text-decoration: none;
 }
 
 a {
-
     text-decoration: none;
 }
 
@@ -78,15 +81,36 @@ a:hover {
     text-decoration: underline;
 }
 
-.content {
-    margin-left: 220px;
-    padding: 20px;
-    flex: 1;
-}
-
-
-#home{
-
+#home {
     text-align: center;
 }
 
+.substack {
+    margin: 20px auto;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        flex-direction: row;
+    }
+
+    .navbar {
+        width: 200px;
+        height: 100%;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+    }
+
+    .content {
+        margin-left: 220px;
+        margin-top: 0;
+    }
+
+    .substack {
+        margin-left: 420px;
+    }
+}

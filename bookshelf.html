@@ -15,12 +15,14 @@
             cursor: pointer;
             font-weight: bold;
         }
+        .category {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
     </style>
 </head>
 <body>
-    
-
-
     <div class="navbar">
         <h2>Ashan Jeevanathan</h2>
         <nav>
@@ -38,65 +40,54 @@
         </nav>
     </div>
     <div class="content">
-
-    
         <section id="reviews">
             <h1>Book Reviews</h1>
-            <p>These are the collection of books that ive read in my lifetime that I have read. Click on the title to view more informaiton.</p>
+            <p>These are the collection of books that I've read in my lifetime. Click on the title to view more information.</p>
+            
+            <div class="category">Business & Entrepreneurship</div>
             <ul>
-                <div class="toggle-button" href=" https://amzn.to/4dMdZ6E" >Anything You Want by Derek Silvers</div>
-                <div class="toggle-content">
-                    <ul>
-                        <li><strong>Genre:</strong> Non-Fiction, Business & Entrepreneurship</li>
-                        <li><strong>Year Read:</strong> 2024</li>
-                        <li><strong>Review:</strong> Short but extremely informative book, Talks about how his Passion in music lead to his Business, the creation of cdbaby.com, Informative advice on customer prioritization, book is constructed in a creative way, exploring his key concepts of a business in a story-telling manner.</li>
-                        <li>  <strong>Quotes:</strong> <br> 1. "ideas are worth nothing unless they are executed. They are just a multiplier. Execution is worth millions.” <br> 2. “Success comes from persistently improving and inventing, not from persistently doing what's not working. ” <br> 3. “Set up your business like you don't need the money, and it'll likely come your way."
-                             <br>
-                            4. "No matter which goal you choose, there will be lots of people telling you you're wrong. 
-                            Just pay close attention to what excites you and what drains you. Pay close attention to when you're being the real you and when you're trying to impress an invisible jury. ”</li>
-                        <li>Extremely Short book, easy and intriguing enough to read in one day.</li>
-                        <li><a href="https://amzn.to/4dMdZ6E" ><strong>Purchase</strong></a></li>
-                    </ul>
-                </div>
+                <li>
+                    <div class="toggle-button">Anything You Want</div>
+                    <div class="toggle-content">
+                        <ul>
+                            <li><strong>Author:</strong> Derek Silvers</li>
+                            <li><strong>Genre:</strong> Business & Entrepreneurship</li>
+                            <li><strong>Year Read:</strong> 2024</li>
+                            <li><strong>Review:</strong> Short but extremely informative book. Talks about how his passion in music led to his business, the creation of cdbaby.com. Informative advice on customer prioritization. The book is constructed in a creative way, exploring key business concepts through storytelling.</li>
+                            <li><strong>Quotes:</strong>
+                                <br>1. "Ideas are worth nothing unless they are executed. They are just a multiplier. Execution is worth millions."
+                                <br>2. "Success comes from persistently improving and inventing, not from persistently doing what's not working."
+                                <br>3. "Set up your business like you don't need the money, and it'll likely come your way."
+                                <br>4. "No matter which goal you choose, there will be lots of people telling you you're wrong. Just pay close attention to what excites you and what drains you. Pay close attention to when you're being the real you and when you're trying to impress an invisible jury."
+                            </li>
+                            <li>Extremely short book, easy and intriguing enough to read in one day.</li>
+                            <li><a href="https://amzn.to/4dMdZ6E"><strong>Purchase</strong></a></li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
 
+            <div class="category">Fiction</div>
+            <!-- Add fiction books here -->
 
-            <ul>
-                <div class="toggle-button" href=" https://amzn.to/4dMdZ6E" >Anything You Want by Derek Silvers</div>
-                <div class="toggle-content">
-                    <ul>
-                        <li><strong>Genre:</strong> Non-Fiction, Business & Entrepreneurship</li>
-                        <li><strong>Year Read:</strong> 2024</li>
-                        <li><strong>Review:</strong> Short but extremely informative book, Talks about how his Passion in music lead to his Business, the creation of cdbaby.com, Informative advice on customer prioritization, book is constructed in a creative way, exploring his key concepts of a business in a story-telling manner.</li>
-                        <li>  <strong>Quotes:</strong> <br> 1. "ideas are worth nothing unless they are executed. They are just a multiplier. Execution is worth millions.” <br> 2. “Success comes from persistently improving and inventing, not from persistently doing what's not working. ” <br> 3. “Set up your business like you don't need the money, and it'll likely come your way."
-                             <br>
-                            4. "No matter which goal you choose, there will be lots of people telling you you're wrong. 
-                            Just pay close attention to what excites you and what drains you. Pay close attention to when you're being the real you and when you're trying to impress an invisible jury. ”</li>
-                        <li>Extremely Short book, easy and intriguing enough to read in one day.</li>
-                        <li><a href="https://amzn.to/4dMdZ6E" ><strong>Purchase</strong></a></li>
-                    </ul>
-                </div>
-            </ul>
+            <div class="category">Self-Help</div>
+            <!-- Add self-help books here -->
 
-    
-           
+            <div class="category">Science</div>
+            <!-- Add science books here -->
 
-
-
-
+            <div class="category">History</div>
+            <!-- Add history books here -->
         </section>
     </div>
 
     <script>
-        document.querySelector('.toggle-button').addEventListener('click', function() {
-            var content = document.querySelector('.toggle-content');
-            if (content.style.display === 'none' || content.style.display === '') {
-                content.style.display = 'block';
-            } else {
-                content.style.display = 'none';
-            }
+        document.querySelectorAll('.toggle-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                content.style.display = content.style.display === 'none' || content.style.display === '' ? 'block' : 'none';
+            });
         });
     </script>
 </body>
-
 </html>
