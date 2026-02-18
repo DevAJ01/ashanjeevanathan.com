@@ -1,61 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architects of Thought | Influences</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-    <div class="navbar">
-        <h2>Ashan Jeevanathan</h2>
-        <nav>
-            <ul>
-              <li><a href="./index.html">Home</a></li>
-              <li><a href="./lifeupdates.html">Life Updates</a></li>
-              <li><a href="./philosophy.html">Jeevanantharajah Philosophy of Life</a></li>
-              <li><a href="./bookshelf.html">Bookshelf</a></li>
-              <li><a href="./advice.html">Advice</a></li>
-              <li><a href="./interests.html">Interests</a></li>
-              <li><a href="./people.html"></a>Influential People in my Life</li>
-              <li><a href="./"></a>Coming Soon</li>
-              <li><a href="./"></a>Coming Soon</li>
-            </ul>
-        </nav>
-    </div>
-    
-     
-    <div class="content">
-        <section id="reviews">
-            <h1>Influential People in My Life</h1>
-            <p>These are the people who have had the biggest Impact in my Life</p>
-            <ul>
-                <li>
-                    <h4><a href="https://www.cpt.univ-mrs.fr/~rovelli/">Carlo Rovelli</a></h4>
-                    <p><strong>How have they impacted my life:</strong>I Contacted Carlo Rovelli at the age of 18, </p>
-                    
-                </li>
-                
-                <!-- Add more reviews as needed -->
-            </ul>
-        </section>
-   
+  <div class="grain-overlay"></div>
+  <div class="container">
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="brand">AJ.</div>
 
+      <!-- Desktop Nav -->
+      <div class="nav-links">
+        <a href="./index.html#explore">Explore</a>
+        <a href="./index.html#principles">Philosophy</a>
+        <a href="./index.html#contact">Contact</a>
+      </div>
 
+      <!-- Mobile Menu Icon -->
+      <div class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
 
-  
+    <div class="main-content-wrapper top-spacing">
 
-      <footer>
-        <p>
-          Copyright (c) 2024 Ashan Jeevanathan. All rights reserved.
-     
+      <!-- Hero Section -->
+      <section class="influences-hero">
+        <span class="eyebrow">The Influences</span>
+        <h1 class="influences-title">Architects of Thought</h1>
+        <div class="title-underline"></div>
+        <p class="influences-desc">
+          A curated assembly of souls whose wisdom has sculpted my worldview. These are the mentors, visionaries, and
+          quiet giants who define the legacy of my perspective.
         </p>
+
+        <!-- Filter Pills -->
+        <div class="lab-filters justify-center"> <!-- Reusing lab-filters class for consistency -->
+          <button class="lab-filter active">All Influencers</button>
+          <button class="lab-filter">Writers</button>
+          <button class="lab-filter">Philosophers</button>
+          <button class="lab-filter">Visionaries</button>
+          <button class="lab-filter">Family</button>
+        </div>
+      </section>
+
+      <!-- Influences Grid -->
+      <section class="architects-grid">
+
+
+
+        <!-- Card Template
+        <div class="architect-card">
+          <div class="architect-img-container">
+            <img src="IMAGE SOURCE"
+              alt="NAME" class="architect-img">
+            <div class="architect-overlay"></div>
+          </div>
+          <div class="architect-info">
+            <h3 class="architect-name">NAME</h3>
+            <span class="architect-role">ROLE</span>
+            <p class="architect-quote">
+              "QUOTE"
+            </p>
+          </div>
+        </div>
+  Card Template-->
+
+        <!-- Card 1: Carlo Rovelli -->
+        <div class="architect-card">
+          <div class="architect-img-container">
+            <img src="./images/people/rovelli.jpg" alt="Carlo Rovelli" class="architect-img">
+            <div class="architect-overlay"></div>
+          </div>
+          <div class="architect-info">
+            <h3 class="architect-name">Carlo Rovelli 03.05.1956 -</h3>
+            <span class="architect-role">Italian theoretical physicist and writer</span>
+            <p class="architect-quote">
+              "Quote from him to me: I Know.. From what you write, I think your life will be fantastic... Do not hury:
+              things will come... All my sympathym and all my very best wishes!"
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2: Simon Fazzani -->
+        <div class="architect-card tall">
+          <div class="architect-img-container">
+            <img src="./images/people/fazzani.png" alt=" Simon Fazzani" class="architect-img">
+            <div class="architect-overlay"></div>
+          </div>
+          <div class="architect-info">
+            <h3 class="architect-name">Simon Fazzani 23.11.1974 - 29.12.2025</h3>
+            <span class="architect-role">My Mentor, Best Friend, Programming Genius </span>
+            <p class="architect-quote">
+              "Be a ruthless master of all and a generalist, thats how you will win in this new world I say - 1
+              September 2024, 10:39PM"
+            </p>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Bottom CTA -->
+      <section class="architects-cta">
+        <h2 class="architects-cta-title">Who are your Architects?</h2>
+        <p class="architects-cta-desc">
+          The journey is never solitary. We are the sum of those we choose to listen to. Reflect on the voices that echo
+          in your own halls of thought.
+        </p>
+        <a href="#" class="architects-btn">Share a Reflection</a>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-links">
+          <div class="social-icons">
+            <a href="https://x.com/AJeevanathan"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/ashan-jeevanathan/"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="copyright">
+          © 2026 Ashan Jeevanathan. All rights reserved.
+        </div>
       </footer>
 
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./script.js"></script>
 </body>
 
-
 </html>
-
-  
