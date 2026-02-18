@@ -1,93 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Reviews</title>
+    <title>Ashan Jeevanathan | The Bookshelf</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
-    <style>
-        .toggle-content {
-            display: none;
-            margin-left: 20px;
-        }
-        .toggle-button {
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .category {
-            margin-top: 20px;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-    <div class="navbar">
-        <h2>Ashan Jeevanathan</h2>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./lifeupdates.html">Life Updates</a></li>
-                <li><a href="./philosophy.html">Jeevanantharajah Philosophy of Life</a></li>
-                <li><a href="./bookshelf.html">Bookshelf</a></li>
-                <li><a href="./advice.html">Advice</a></li>
-                <li><a href="./interests.html">Interests</a></li>
-                <li><a href="./"></a></li>
-                <li><a href="./"></a></li>
-                <li><a href="./"></a></li>
-            </ul>
+
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <a href="./index.html" class="brand">AJ.</a>
+
+            <div class="nav-links">
+                <a href="./bookshelf.html" style="color: white; opacity: 1;">Bookshelf</a>
+                <a href="./people.html">Influences</a>
+                <a href="./articles.html">Articles</a>
+                <a href="./index.html#contact">Contact</a>
+            </div>
+
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
-    </div>
-    <div class="content">
-        <section id="reviews">
-            <h1>Book Reviews</h1>
-            <p>These are the collection of books that I've read in my lifetime. Click on the title to view more information.</p>
-            
-            <div class="category">Business & Entrepreneurship</div>
-            <ul>
-                <li>
-                    <div class="toggle-button">Anything You Want</div>
-                    <div class="toggle-content">
-                        <ul>
-                            <li><strong>Author:</strong> Derek Silvers</li>
-                            <li><strong>Genre:</strong> Business & Entrepreneurship</li>
-                            <li><strong>Year Read:</strong> 2024</li>
-                            <li><strong>Review:</strong> Short but extremely informative book. Talks about how his passion in music led to his business, the creation of cdbaby.com. Informative advice on customer prioritization. The book is constructed in a creative way, exploring key business concepts through storytelling.</li>
-                            <li><strong>Quotes:</strong>
-                                <br>1. "Ideas are worth nothing unless they are executed. They are just a multiplier. Execution is worth millions."
-                                <br>2. "Success comes from persistently improving and inventing, not from persistently doing what's not working."
-                                <br>3. "Set up your business like you don't need the money, and it'll likely come your way."
-                                <br>4. "No matter which goal you choose, there will be lots of people telling you you're wrong. Just pay close attention to what excites you and what drains you. Pay close attention to when you're being the real you and when you're trying to impress an invisible jury."
-                            </li>
-                            <li>Extremely short book, easy and intriguing enough to read in one day.</li>
-                            <li><a href="https://amzn.to/4dMdZ6E"><strong>Purchase</strong></a></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
 
-            <div class="category">Fiction</div>
-            <!-- Add fiction books here -->
+        <!-- Page Header -->
+        <header class="page-header">
+            <h1 class="page-title">The Bookshelf</h1>
+            <p class="page-desc">A curated collection of literary influences. These are the ideas, stories, and
+                philosophies that have shaped my perspective and defined my legacy.</p>
 
-            <div class="category">Self-Help</div>
-            <!-- Add self-help books here -->
+            <div class="filters">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Philosophy</button>
+                <button class="filter-btn">Fiction</button>
+                <button class="filter-btn">Science</button>
+                <button class="filter-btn">Biography</button>
+                <button class="filter-btn">Design</button>
+            </div>
+        </header>
 
-            <div class="category">Science</div>
-            <!-- Add science books here -->
+        <!-- Books Grid -->
+        <div class="books-grid">
 
-            <div class="category">History</div>
-            <!-- Add history books here -->
+            <!-- Book 1 (Linked Demo) -->
+            <a href="./books/die-with-zero.html" class="book-card" data-category="philosophy">
+                <div class="book-cover">
+                    <span class="book-tag">Philosophy</span>
+                    <img src="https://placehold.co/400x600/222/FFF?text=Die+With+Zero" alt="Die With Zero Cover"
+                        class="book-image">
+                </div>
+                <div class="book-info">
+                    <h3>Die With Zero</h3>
+                    <span class="book-author">Bill Perkins</span>
+                    <p class="book-quote">"The business of life is the acquisition of memories. In the end that's all
+                        there is."</p>
+                </div>
+            </a>
+
+            <!-- Book 2 -->
+            <div class="book-card" data-category="science">
+                <div class="book-cover">
+                    <span class="book-tag">Science</span>
+                    <img src="https://placehold.co/400x600/111/FFF?text=Infinity" alt="The Beginning of Infinity Cover"
+                        class="book-image">
+                </div>
+                <div class="book-info">
+                    <h3>The Beginning of Infinity</h3>
+                    <span class="book-author">David Deutsch</span>
+                    <p class="book-quote">"A fundamental shift in how I view progress. Problems are inevitable, but
+                        problems are soluble."</p>
+                </div>
+            </div>
+
+            <!-- Book 3 -->
+            <div class="book-card" data-category="history">
+                <div class="book-cover">
+                    <span class="book-tag">History</span>
+                    <img src="https://placehold.co/400x600/333/FFF?text=Sapiens" alt="Sapiens Cover" class="book-image">
+                </div>
+                <div class="book-info">
+                    <h3>Sapiens</h3>
+                    <span class="book-author">Yuval Noah Harari</span>
+                    <p class="book-quote">"Helped me understand the shared myths that bind society together."</p>
+                </div>
+            </div>
+
+            <!-- Book 4 -->
+            <div class="book-card" data-category="fiction">
+                <div class="book-cover">
+                    <span class="book-tag">Fiction</span>
+                    <img src="https://placehold.co/400x600/444/FFF?text=Dune" alt="Dune Cover" class="book-image">
+                </div>
+                <div class="book-info">
+                    <h3>Dune</h3>
+                    <span class="book-author">Frank Herbert</span>
+                    <p class="book-quote">"Fear is the mind-killer."</p>
+                </div>
+            </div>
+
+            <!-- Book 5 -->
+            <div class="book-card" data-category="psychology">
+                <div class="book-cover">
+                    <span class="book-tag">Psychology</span>
+                    <img src="https://placehold.co/400x600/555/FFF?text=Thinking" alt="Thinking Fast CSS Cover"
+                        class="book-image">
+                </div>
+                <div class="book-info">
+                    <h3>Thinking, Fast and Slow</h3>
+                    <span class="book-author">Daniel Kahneman</span>
+                    <p class="book-quote">"Exposed the biases in my own decision making."</p>
+                </div>
+            </div>
+
+            <!-- Book 6 -->
+            <div class="book-card" data-category="design">
+                <div class="book-cover">
+                    <span class="book-tag">Design</span>
+                    <img src="https://placehold.co/400x600/666/FFF?text=Design" alt="Design of Everyday Things Cover"
+                        class="book-image">
+                </div>
+                <div class="book-info">
+                    <h3>The Design of Everyday Things</h3>
+                    <span class="book-author">Don Norman</span>
+                    <p class="book-quote">"Good design is invisible, and bad design screams for attention."</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="newsletter-icon">
+                <i class="fas fa-book-reader"></i>
+            </div>
+            <h2 class="newsletter-title">Join the Reading List</h2>
+            <p class="newsletter-desc">I send out a monthly summary of what I'm reading, watching, and learning.<br>No
+                spam, just high-signal ideas.</p>
+
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                <button type="submit" class="newsletter-btn">Subscribe</button>
+            </form>
         </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-links">
+                <a href="https://x.com/AJeevanathan">Twitter</a>
+                <a href="https://www.linkedin.com/in/ashan-jeevanathan/">LinkedIn</a>
+                <a href="https://www.instagram.com/ashanjeevanathan/">Instagram</a>
+                <a href="mailto:your-email@example.com">Email</a>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Ashan Jeevanathan. All rights reserved.
+            </div>
+        </footer>
+
     </div>
 
+    <script src="./script.js"></script>
     <script>
-        document.querySelectorAll('.toggle-button').forEach(button => {
-            button.addEventListener('click', function() {
-                const content = this.nextElementSibling;
-                content.style.display = content.style.display === 'none' || content.style.display === '' ? 'block' : 'none';
-            });
-        });
+        // Inline script to handle simple filtering if external script fails or for specific page logic
+        // But main logic is in script.js now.
+        // Ensuring data-category attributes match filter text
     </script>
 </body>
+
 </html>

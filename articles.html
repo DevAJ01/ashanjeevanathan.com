@@ -1,173 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Articles</title>
+    <title>Articles | Ashan Jeevanathan</title>
     <link rel="stylesheet" href="./style.css">
-    <style>
-        .popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.7);
-            z-index: 1000;
-        }
-        .popup-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            width: 80%;
-            max-width: 800px;
-            max-height: 80%;
-            overflow-y: auto;
-        }
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .sources {
-            margin-top: 20px;
-            border-top: 1px solid #ccc;
-            padding-top: 10px;
-        }
-        .sources h3 {
-            margin-bottom: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-    <div class="navbar">
-        <h2>Ashan Jeevanathan</h2>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./articles.html">Articles</a></li>
-                <li><a href="./philosophy.html">Jeevanantharajah Philosophy of Life</a></li>
-                <li><a href="./bookshelf.html">Bookshelf</a></li>
-                <li><a href="./advice.html">Advice</a></li>
-                <li><a href="./interests.html">Interests</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="content">
-        <section id="articles">
-            <h1>Articles</h1>
-            <div class="article-category">
-                <h2>Technology</h2>
-                <ul>
-                    <li><a href="#" onclick="showArticle('ai-healthcare')">The Future of AI in Healthcare</a></li>
-                    <li><a href="#" onclick="showArticle('5g-tech')">5G Technology: Revolutionizing Communication</a></li>
-                </ul>
-            </div>
-            <div class="article-category">
-                <h2>Philosophy</h2>
-                <ul>
-                    <li><a href="#" onclick="showArticle('free-will')">The Concept of Free Will in Modern Society</a></li>
-                    <li><a href="#" onclick="showArticle('existentialism')">Exploring Existentialism in the Digital Age</a></li>
-                </ul>
-            </div>
-            <div class="article-category">
-                <h2>Personal Development</h2>
-                <ul>
-                    <li><a href="#" onclick="showArticle('effective-habits')">Habits of Highly Effective People</a></li>
-                    <li><a href="#" onclick="showArticle('mindfulness')">Mindfulness Techniques for Stress Reduction</a></li>
-                </ul>
-            </div>
-        </section>
-    </div>
 
-    <div id="articlePopup" class="popup">
-        <div class="popup-content">
-            <span class="close" onclick="closeArticle()">&times;</span>
-            <h2 id="articleTitle"></h2>
-            <div id="articleContent"></div>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="brand">AJ.</div>
+
+            <!-- Desktop Nav -->
+            <div class="nav-links">
+                <a href="./index.html#explore">Explore</a>
+                <a href="./index.html#principles">Philosophy</a>
+                <a href="./index.html#contact">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Icon -->
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+
+        <div class="main-content-wrapper">
+
+            <!-- Featured Section -->
+            <section class="featured-section">
+                <div class="featured-content">
+                    <div class="featured-tag">
+                        <i class="fas fa-star"></i> Featured Read
+                    </div>
+                    <h1 class="featured-title">The Intersection of Legacy and Digital Permanence</h1>
+                    <p class="featured-desc">
+                        An exploration into how our digital footprints define our long-term legacy in an era of
+                        ephemeral data and shifting architectural paradigms.
+                    </p>
+                    <div class="featured-meta">
+                        <span><i class="far fa-calendar"></i> Oct 12, 2023</span>
+                        <span><i class="far fa-clock"></i> 12 min read</span>
+                    </div>
+                    <a href="#" class="featured-btn">
+                        Read Full Essay <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="featured-image-container">
+                    <div class="featured-glow"></div>
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
+                        alt="Abstract digital network" class="featured-image">
+                    <div class="featured-overlay"></div>
+                </div>
+            </section>
+
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <div class="filter-groups">
+                    <button class="filter-pill active">All Works</button>
+                    <button class="filter-pill">Original Essays</button>
+                    <button class="filter-pill">Substack Archive</button>
+                    <button class="filter-pill">Research Notes</button>
+                </div>
+                <div class="filter-sort">
+                    <i class="fas fa-sort-amount-down"></i> Sort by: Latest
+                </div>
+            </div>
+
+            <!-- Article Feed -->
+            <div class="articles-grid">
+                <!-- Article 1 -->
+                <article class="article-card">
+                    <div class="article-thumb">
+                        <span class="article-badge">Substack</span>
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
+                            alt="Vintage computer">
+                    </div>
+                    <div class="article-meta">
+                        <span>Sept 28, 2023</span>
+                        <span class="dot"></span>
+                        <span>8 min read</span>
+                    </div>
+                    <h3 class="article-title">The Ghost in the Machine: Identity in the Age of AI</h3>
+                    <p class="article-excerpt">
+                        As we delegate more of our creative and cognitive processes to large language models, what
+                        remains of the original human spark?
+                    </p>
+                    <a href="#" class="article-link">Read Piece <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="article-card">
+                    <div class="article-thumb">
+                        <span class="article-badge">Essay</span>
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
+                            alt="Modern architecture">
+                    </div>
+                    <div class="article-meta">
+                        <span>Sept 15, 2023</span>
+                        <span class="dot"></span>
+                        <span>15 min read</span>
+                    </div>
+                    <h3 class="article-title">Notes on Architecture: Built to Last vs Built to Change</h3>
+                    <p class="article-excerpt">
+                        Analyzing the philosophical shift from monolithic permanence in physical structures to the
+                        modular, adaptive nature of modern software.
+                    </p>
+                    <a href="#" class="article-link">Read Piece <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="article-card">
+                    <div class="article-thumb">
+                        <span class="article-badge">Archives</span>
+                        <img src="https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=2074&auto=format&fit=crop"
+                            alt="Abstract light streaks">
+                    </div>
+                    <div class="article-meta">
+                        <span>Aug 30, 2023</span>
+                        <span class="dot"></span>
+                        <span>10 min read</span>
+                    </div>
+                    <h3 class="article-title">Chronicles of the 21st Century: The Information Glut</h3>
+                    <p class="article-excerpt">
+                        How our brains are adapting to the sheer volume of data we consume daily, and the techniques we
+                        can use to filter noise.
+                    </p>
+                    <a href="#" class="article-link">Read Piece <i class="fas fa-arrow-right"></i></a>
+                </article>
+            </div>
+
+            <!-- Newsletter Section -->
+            <section class="newsletter-glass">
+                <div class="newsletter-glow"></div>
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2>Stay in the loop.</h2>
+                        <p>Get my latest long-form essays and curated thoughts delivered directly to your inbox through
+                            my Substack. No noise, just signal.</p>
+                    </div>
+                    <div class="newsletter-signup">
+                        <form class="glass-form">
+                            <input type="email" placeholder="Email address">
+                            <button type="submit">Subscribe Now</button>
+                        </form>
+                        <p class="newsletter-note">Join 5,000+ readers. No spam, ever.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer>
+                <div class="footer-links">
+                    <a href="https://x.com/AJeevanathan">Twitter</a>
+                    <a href="https://www.linkedin.com/in/ashan-jeevanathan/">LinkedIn</a>
+                    <a href="mailto:your-email@example.com">Email</a>
+                </div>
+                <div class="copyright">
+                    &copy; 2026 Ashan Jeevanathan. All rights reserved.
+                </div>
+            </footer>
+
         </div>
     </div>
 
-    <script>
-        const articles = {
-            'ai-healthcare': {
-                title: 'The Future of AI in Healthcare',
-                content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                sources: [
-                    { text: 'AI in Medicine: Our Changing Lives and the Future of Healthcare', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7640807/' },
-                    { text: 'Artificial Intelligence in Healthcare: Past, Present and Future', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7325854/' }
-                ]
-            },
-            '5g-tech': {
-                title: '5G Technology: Revolutionizing Communication',
-                content: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-                sources: [
-                    { text: '5G Technology: A New Era of Wireless Communication', url: 'https://ieeexplore.ieee.org/document/9083951' },
-                    { text: 'The Promise of 5G', url: 'https://www.nature.com/articles/d41586-020-00740-y' }
-                ]
-            },
-            'free-will': {
-                title: 'The Concept of Free Will in Modern Society',
-                content: 'Nulla facilisi. Maecenas aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.',
-                sources: [
-                    { text: 'The Concept of Free Will', url: 'https://www.iep.utm.edu/free-will/' },
-                    { text: 'Free Will and Determinism', url: 'https://plato.stanford.edu/entries/free-will-determinism/' }
-                ]
-            },
-            'existentialism': {
-                title: 'Exploring Existentialism in the Digital Age',
-                content: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.',
-                sources: [
-                    { text: 'Existentialism and Technology', url: 'https://www.iep.utm.edu/exist-tech/' },
-                    { text: 'Existentialism in the Digital Age', url: 'https://www.academia.edu/43411162/Existentialism_in_the_Digital_Age' }
-                ]
-            },
-            'effective-habits': {
-                title: 'Habits of Highly Effective People',
-                content: 'Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Pellentesque in ipsum id orci porta dapibus.',
-                sources: [
-                    { text: 'The 7 Habits of Highly Effective People', url: 'https://www.stephen-covey.com/7-habits/' },
-                    { text: 'Habits of Highly Effective People', url: 'https://www.amazon.com/Habits-Highly-Effective-People-Stephen/dp/0743269519' }
-                ]
-            },
-            'mindfulness': {
-                title: 'Mindfulness Techniques for Stress Reduction',
-                content: 'Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.',
-                sources: [
-                    { text: 'Mindfulness: A Practical Guide to Finding Peace in a Frantic World', url: 'https://www.amazon.com/Mindfulness-Practical-Guide-Finding-Frantic/dp/0062661611' },
-                    { text: 'The Mindful Way Workbook', url: 'https://www.amazon.com/Mindful-Way-Workbook-Transforming-Relationships/dp/1608829565' }
-                ]
-            }
-        };
-
-        function showArticle(articleId) {
-            const article = articles[articleId];
-            document.getElementById('articleTitle').textContent = article.title;
-            document.getElementById('articleContent').textContent = article.content;
-            
-            // Add sources
-            let sourcesHtml = '<div class="sources"><h3>Sources:</h3><ul>';
-            article.sources.forEach(source => {
-                sourcesHtml += `<li><a href="${source.url}" target="_blank">${source.text}</a></li>`;
-            });
-            sourcesHtml += '</ul></div>';
-            
-            document.getElementById('articleContent').innerHTML += sourcesHtml;
-            document.getElementById('articlePopup').style.display = 'block';
-        }
-
-        function closeArticle() {
-            document.getElementById('articlePopup').style.display = 'none';
-        }
-    </script>
+    <!-- Scripts -->
+    <script src="./script.js"></script>
 </body>
+
 </html>
-
-
