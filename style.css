@@ -1589,8 +1589,232 @@ footer {
     .connect-form {
         flex-direction: column;
     }
+}
 
-    .connect-btn {
-        width: 100%;
+/* ===========================
+   Projects / The Lab Page Styles
+   =========================== */
+
+.top-spacing {
+    padding-top: 40px;
+}
+
+.hire-me-btn {
+    background: var(--accent-blue);
+    color: white !important;
+    padding: 8px 16px;
+    border-radius: 6px;
+    opacity: 1 !important;
+    transition: background 0.3s ease;
+}
+
+.hire-me-btn:hover {
+    background: #1d4ed8;
+}
+
+/* Lab Hero */
+.lab-hero {
+    margin-bottom: 60px;
+    padding: 0 20px;
+}
+
+.lab-title {
+    font-size: 4rem;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 24px;
+}
+
+.highlight-lab {
+    color: var(--accent-blue);
+}
+
+.lab-desc {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.lab-filters {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.lab-filter {
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 50px;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-body);
+    font-weight: 600;
+}
+
+.lab-filter.active,
+.lab-filter:hover {
+    background: var(--accent-blue);
+    color: white;
+}
+
+/* Lab Grid (Masonry-ish) */
+.lab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 120px;
+}
+
+/* Make some cards span two rows for masonry feel if supported, 
+   or just rely on aspect ratio of images/containers */
+.lab-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.lab-card.tall {
+    grid-row: span 2;
+}
+
+.lab-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.lab-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.lab-card.tall .lab-img {
+    aspect-ratio: 9/16;
+}
+
+.lab-card:not(.tall) .lab-img {
+    aspect-ratio: 4/5;
+}
+
+.lab-card:hover .lab-img {
+    transform: scale(1.05);
+}
+
+.lab-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.lab-card:hover .lab-overlay {
+    opacity: 0.8;
+}
+
+.lab-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px;
+    z-index: 10;
+}
+
+.lab-tag {
+    display: inline-block;
+    background: var(--accent-blue);
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.lab-project-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    font-family: var(--font-heading);
+}
+
+/* Lab CTA */
+.lab-cta {
+    background: rgba(5, 10, 24, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 80px 40px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.lab-cta-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 16px;
+    font-family: var(--font-body);
+}
+
+.lab-cta-desc {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 40px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lab-cta-btn {
+    display: inline-block;
+    background: var(--accent-blue);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: background 0.3s ease;
+}
+
+.lab-cta-btn:hover {
+    background: #1d4ed8;
+}
+
+/* Footer Social Icons */
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: white;
+}
+
+/* Mobile Adjustments for Projects */
+@media (max-width: 600px) {
+    .lab-grid {
+        grid-template-columns: 1fr;
     }
+
+    .lab-title {
+        font-size: 3rem;
+    }
+}
 }
