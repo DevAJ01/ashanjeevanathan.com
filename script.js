@@ -2,12 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Mobile Menu Toggle ---
     const mobileToggle = document.querySelector('.mobile-menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+    const navLinks = document.querySelector('.nav-links') || document.querySelector('.navbar nav ul');
 
     if (mobileToggle && navLinks) {
         mobileToggle.addEventListener('click', (e) => {
             e.stopPropagation();
             navLinks.classList.toggle('active');
+            mobileToggle.setAttribute('aria-expanded', navLinks.classList.contains('active') ? 'true' : 'false');
         });
 
         document.addEventListener('click', (e) => {
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 !navLinks.contains(e.target) &&
                 !mobileToggle.contains(e.target)) {
                 navLinks.classList.remove('active');
+                mobileToggle.setAttribute('aria-expanded', 'false');
             }
         });
     }
