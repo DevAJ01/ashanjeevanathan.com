@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Interests | Ashan Jeevanathan</title>
+    <link rel="stylesheet" href="./style.css?v=20260512-readable">
     <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-    <script src="./script.js"></script>
 </head>
+
 <body>
-    <div class="navbar">
-        <h2>Ashan Jeevanathan</h2>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./projects.html">Projects</a></li>
-                <li><a href="./articles.html">Writing</a></li>
-                <li><a href="./bookshelf.html">Bookshelf</a></li>
-                <li><a href="./people.html">People</a></li>
-                <li><a href="mailto:ashanj1@outlook.com">Email</a></li>
-            </ul>
+    <div class="container">
+        <nav class="navbar">
+            <a href="./index.html" class="brand">Ashan Jeevanathan</a>
+            <div class="nav-links">
+                <a href="./projects.html">Projects</a>
+                <a href="./articles.html">Writing</a>
+                <a href="./bookshelf.html">Bookshelf</a>
+                <a href="./people.html">People</a>
+                <a href="mailto:ashanj1@outlook.com">Email</a>
+            </div>
+            <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation"><span></span><span></span></button>
         </nav>
-    </div>
-    <div class="content">
-        <section id="about">
+
+        <main class="simple-page">
+            <p class="section-kicker">Current interests</p>
             <h1>Interests</h1>
-            <p>A working list of subjects I keep orbiting: software, architecture, physics, entrepreneurship, books,
-                design, writing, and how to live with more attention.</p>
-        </section>
+            <div class="simple-prose">
+                <ul>
+                    <li>Software and developer tools</li>
+                    <li>Architecture and cities</li>
+                    <li>Physics and philosophy</li>
+                    <li>Books, writing, and taste</li>
+                    <li>Entrepreneurship and useful work</li>
+                </ul>
+            </div>
+        </main>
     </div>
+    <script src="./script.js"></script>
 </body>
+
 </html>

@@ -4,18 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Articles | Ashan Jeevanathan</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Writing | Ashan Jeevanathan</title>
+    <link rel="stylesheet" href="./style.css?v=20260512-readable">
     <link rel="icon" href="./favicon.svg" type="image/svg+xml">
 </head>
 
 <body>
     <div class="container">
-        <!-- Navigation -->
         <nav class="navbar">
-            <div class="brand">AJ.</div>
-
-            <!-- Desktop Nav -->
+            <a href="./index.html" class="brand">Ashan Jeevanathan</a>
             <div class="nav-links">
                 <a href="./projects.html">Projects</a>
                 <a href="./articles.html">Writing</a>
@@ -23,118 +20,41 @@
                 <a href="./people.html">People</a>
                 <a href="mailto:ashanj1@outlook.com">Email</a>
             </div>
-
-            <!-- Mobile Menu Icon -->
-            <div class="mobile-menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
+            <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation"><span></span><span></span></button>
         </nav>
 
-        <div class="main-content-wrapper">
+        <main class="simple-page wide">
+            <p class="section-kicker">Essays and notes</p>
+            <h1>Writing</h1>
+            <p class="lead">Short essays, longer reflections, and notes I want to make easier to find again.</p>
 
-            <!-- Featured Section -->
-            <section class="featured-section">
-                <div class="featured-content">
-                    <div class="featured-tag">
-                        <i class="fas fa-star"></i> Featured Read
+            <div class="simple-list">
+                <a href="./articles/featured-article.html" class="simple-item">
+                    <time>Oct 12, 2023</time>
+                    <div>
+                        <h2>Find Your Singularity</h2>
+                        <p>A reflection on memory, legacy, and the shift from physical artifacts to digital records.</p>
                     </div>
-                    <h1 class="featured-title">Find Your Singularity</h1>
-                    <p class="featured-desc">
-                        In an era where every keystroke is archived and every memory is digitized, the concept of a
-                        "legacy" has shifted from physical artifacts to ethereal bits.
-                    </p>
-                    <div class="featured-meta">
-                        <span><i class="far fa-calendar"></i> Oct 12, 2023</span>
-                        <span><i class="far fa-clock"></i> 12 min read</span>
+                </a>
+                <a href="./articles/article-template.html" class="simple-item">
+                    <time>Sept 28, 2023</time>
+                    <div>
+                        <h2>The Era of Vintage Computing</h2>
+                        <p>What older computing systems can teach us about modern design, restraint, and taste.</p>
                     </div>
-                    <a href="./articles/featured-article.html" class="featured-btn">
-                        Read Full Essay <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <div class="featured-image-container">
-                    <div class="featured-glow"></div>
-                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
-                        alt="Abstract digital network" class="featured-image">
-                    <div class="featured-overlay"></div>
-                </div>
-            </section>
-
-            <!-- Filter Bar -->
-            <div class="filter-bar">
-                <div class="filter-groups">
-                    <button class="filter-pill active">All Works</button>
-                    <button class="filter-pill">Original Essays</button>
-                    <button class="filter-pill">Substack Archive</button>
-                    <button class="filter-pill">Research Notes</button>
-                </div>
-                <div class="filter-sort">
-                    <i class="fas fa-sort-amount-down"></i> Sort by: Latest
-                </div>
+                </a>
             </div>
+        </main>
 
-            <!-- Article Feed -->
-            <div class="articles-grid">
-                <!-- Article 1 -->
-                <article class="article-card">
-                    <div class="article-thumb">
-                        <span class="article-badge">Substack</span>
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
-                            alt="Vintage computer">
-                    </div>
-                    <div class="article-meta">
-                        <span>Sept 28, 2023</span>
-                        <span class="dot"></span>
-                        <span>8 min read</span>
-                    </div>
-                    <h3 class="article-title">The Era of Vintage Computing</h3>
-                    <p class="article-excerpt">
-                        Exploring the aesthetic and functional legacy of early computing systems and what they teach us
-                        about modern design.
-                    </p>
-                    <a href="./articles/article-template.html" class="article-link">Read Piece <i
-                            class="fas fa-arrow-right"></i></a>
-                </article>
-
-
-
+        <footer>
+            <div class="footer-links">
+                <a href="https://x.com/AJeevanathan">Twitter</a>
+                <a href="https://www.linkedin.com/in/ashan-jeevanathan/">LinkedIn</a>
+                <a href="mailto:ashanj1@outlook.com">Email</a>
             </div>
-
-            <!-- Newsletter Section -->
-            <section class="newsletter-glass">
-                <div class="newsletter-glow"></div>
-                <div class="newsletter-content">
-                    <div class="newsletter-text">
-                        <h2>Stay in the loop.</h2>
-                        <p>Get my latest long-form essays and curated thoughts delivered directly to your inbox through
-                            my Substack. No noise, just signal.</p>
-                    </div>
-                    <div class="newsletter-signup">
-                        <form class="glass-form">
-                            <input type="email" placeholder="Email address">
-                            <button type="submit">Subscribe Now</button>
-                        </form>
-                        <p class="newsletter-note">Join 5,000+ readers. No spam, ever.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Footer -->
-            <footer>
-                <div class="footer-links">
-                    <a href="https://x.com/AJeevanathan">Twitter</a>
-                    <a href="https://www.linkedin.com/in/ashan-jeevanathan/">LinkedIn</a>
-                    <a href="mailto:ashanj1@outlook.com">Email</a>
-                </div>
-                <div class="copyright">
-                    &copy; 2026 Ashan Jeevanathan. All rights reserved.
-                </div>
-            </footer>
-
-        </div>
+            <div class="copyright">&copy; 2026 Ashan Jeevanathan.</div>
+        </footer>
     </div>
-
-    <!-- Scripts -->
     <script src="./script.js"></script>
 </body>
 

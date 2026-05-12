@@ -334,6 +334,76 @@ body > .content {
     margin-top: 36px;
 }
 
+.simple-page {
+    max-width: 760px;
+    padding: 76px 0 92px;
+}
+
+.simple-page.wide {
+    max-width: none;
+}
+
+.simple-page h1 {
+    font-size: clamp(3rem, 8vw, 6.25rem);
+    margin-bottom: 28px;
+}
+
+.simple-page .lead {
+    color: var(--ink-soft);
+    font-family: var(--font-serif);
+    font-size: clamp(1.25rem, 2.4vw, 1.7rem);
+    line-height: 1.38;
+    margin-bottom: 48px;
+}
+
+.simple-list {
+    border-top: 1px solid var(--rule);
+}
+
+.simple-item {
+    display: grid;
+    grid-template-columns: 170px minmax(0, 1fr);
+    gap: 28px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--faint);
+}
+
+.simple-item time,
+.simple-item .meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.simple-item h2,
+.simple-item h3 {
+    font-size: 1.45rem;
+    margin-bottom: 6px;
+}
+
+.simple-item p {
+    color: var(--muted);
+    font-size: 0.98rem;
+}
+
+.simple-prose {
+    max-width: 720px;
+}
+
+.simple-prose p,
+.simple-prose li {
+    color: var(--ink-soft);
+    font-family: var(--font-serif);
+    font-size: 1.26rem;
+    line-height: 1.58;
+    margin-bottom: 22px;
+}
+
+.simple-prose ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin: 0 0 28px;
+}
+
 .hero-actions a,
 .text-link,
 .read-link,
@@ -1037,7 +1107,8 @@ footer {
     .index-row,
     .nav-card,
     .insight-card,
-    .article-card {
+    .article-card,
+    .simple-item {
         grid-template-columns: 1fr;
         gap: 8px;
     }
@@ -1116,6 +1187,10 @@ footer {
     .hero,
     .portfolio-hero {
         padding: 48px 0 54px;
+    }
+
+    .simple-page {
+        padding: 50px 0 70px;
     }
 
     .section-header,

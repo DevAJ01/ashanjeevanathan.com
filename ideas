@@ -1,33 +1,37 @@
-
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ideas</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Ideas | Ashan Jeevanathan</title>
+    <link rel="stylesheet" href="./style.css?v=20260512-readable">
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
 </head>
+
 <body>
-    <div class="navbar">
-        <h2>Your Name</h2>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./index.html">Life Updates</a></li>
-                <li><a href="./philosophy.html">Philosophy</a></li>
-                <li><a href="./bookshelf.html">Bookshelf</a></li>
-                <li><a href="./advice.html">Advice</a></li>
-                <li><a href="./interests.html">interests</a></li>
-                <li><a href="./ideas"></a>Ideas</li>
-                <li><a href="./"></a></li>
-                <li><a href="./"></a></li>
-            </ul>
+    <div class="container">
+        <nav class="navbar">
+            <a href="./index.html" class="brand">Ashan Jeevanathan</a>
+            <div class="nav-links">
+                <a href="./projects.html">Projects</a>
+                <a href="./articles.html">Writing</a>
+                <a href="./bookshelf.html">Bookshelf</a>
+                <a href="./people.html">People</a>
+                <a href="mailto:ashanj1@outlook.com">Email</a>
+            </div>
+            <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation"><span></span><span></span></button>
         </nav>
+
+        <main class="simple-page">
+            <p class="section-kicker">Working notes</p>
+            <h1>Ideas</h1>
+            <div class="simple-prose">
+                <p>A place for unfinished thoughts: things worth returning to, testing, and turning into clearer writing or projects.</p>
+            </div>
+        </main>
     </div>
-    <div class="content">
-        <section id="about">
-            <h1>My Ideas for this world</h1>
-            <p>Write a brief introduction about yourself. Include your background, interests, and what you do.</p>
-        </section>
-    </div>
+    <script src="./script.js"></script>
 </body>
+
 </html>

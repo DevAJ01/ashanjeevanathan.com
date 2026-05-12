@@ -4,19 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Lab | Experimental Projects</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Projects | Ashan Jeevanathan</title>
+    <link rel="stylesheet" href="./style.css?v=20260512-readable">
     <link rel="icon" href="./favicon.svg" type="image/svg+xml">
 </head>
 
 <body>
-    <div class="grain-overlay"></div>
     <div class="container">
-        <!-- Navigation -->
         <nav class="navbar">
-            <div class="brand">AJ.</div>
-
-            <!-- Desktop Nav -->
+            <a href="./index.html" class="brand">Ashan Jeevanathan</a>
             <div class="nav-links">
                 <a href="./projects.html">Projects</a>
                 <a href="./articles.html">Writing</a>
@@ -24,145 +20,55 @@
                 <a href="./people.html">People</a>
                 <a href="mailto:ashanj1@outlook.com">Email</a>
             </div>
-
-            <!-- Mobile Menu Icon -->
-            <div class="mobile-menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
+            <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation"><span></span><span></span></button>
         </nav>
 
-        <div class="main-content-wrapper top-spacing">
+        <main class="simple-page wide">
+            <p class="section-kicker">Selected work</p>
+            <h1>Projects</h1>
+            <p class="lead">A small record of things I am building, testing, or using to learn. I prefer projects that force clearer thinking and become more useful with iteration.</p>
 
-            <!-- Hero Section -->
-            <section class="lab-hero">
-                <h1 class="lab-title">The <span class="highlight-lab">Lab</span></h1>
-                <p class="lab-desc">
-                    An experimental space dedicated to the intersection of architectural systems, digital logic, and
-                    societal transformation.
-                </p>
+            <div class="simple-list">
+                <article class="simple-item">
+                    <div class="meta">Digital systems</div>
+                    <div>
+                        <h2>Kinetic Shells</h2>
+                        <p>Explorations in adaptive interfaces, generative structure, and systems that respond to context.</p>
+                    </div>
+                </article>
+                <article class="simple-item">
+                    <div class="meta">Infrastructure</div>
+                    <div>
+                        <h2>Neural Infra</h2>
+                        <p>Notes and prototypes around software infrastructure, developer tools, and how teams ship with less friction.</p>
+                    </div>
+                </article>
+                <article class="simple-item">
+                    <div class="meta">Architecture</div>
+                    <div>
+                        <h2>Civic Pulse</h2>
+                        <p>A design study about public space, community feedback, and the invisible systems that shape cities.</p>
+                    </div>
+                </article>
+                <article class="simple-item">
+                    <div class="meta">Learning</div>
+                    <div>
+                        <h2>Personal Website</h2>
+                        <p>This site: a readable, durable home for projects, notes, books, people, and principles.</p>
+                    </div>
+                </article>
+            </div>
+        </main>
 
-                <!-- Filter Pills -->
-                <div class="lab-filters">
-                    <button class="lab-filter active">All Projects</button>
-                    <button class="lab-filter">Architecture</button>
-                    <button class="lab-filter">Digital Systems</button>
-                    <button class="lab-filter">Social Impact</button>
-                </div>
-            </section>
-
-            <!-- Projects Grid (Masonry Style) -->
-            <section class="lab-grid">
-
-                <!-- Project 1 (Tall) -->
-                <div class="lab-card tall">
-                    <div class="lab-img-wrapper">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1974&auto=format&fit=crop"
-                            alt="Abstract fluid simulation" class="lab-img">
-                        <div class="lab-overlay"></div>
-                    </div>
-                    <div class="lab-info">
-                        <span class="lab-tag">Digital Systems</span>
-                        <h3 class="lab-project-title">Kinetic Shells</h3>
-                    </div>
-                </div>
-
-                <!-- Project 2 (Standard) -->
-                <div class="lab-card">
-                    <div class="lab-img-wrapper">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
-                            alt="Global digital network" class="lab-img">
-                        <div class="lab-overlay"></div>
-                    </div>
-                    <div class="lab-info">
-                        <span class="lab-tag">Digital Systems</span>
-                        <h3 class="lab-project-title">Neural Infra</h3>
-                    </div>
-                </div>
-
-                <!-- Project 3 (Tall) -->
-                <div class="lab-card tall">
-                    <div class="lab-img-wrapper">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1597113366853-fea190b6cd82?q=80&w=1974&auto=format&fit=crop"
-                            alt="Rough stone texture" class="lab-img">
-                        <div class="lab-overlay"></div>
-                    </div>
-                    <div class="lab-info">
-                        <span class="lab-tag">Architecture</span>
-                        <h3 class="lab-project-title">Civic Pulse</h3>
-                    </div>
-                </div>
-
-                <!-- Project 4 (Standard/Wide) -->
-                <div class="lab-card">
-                    <div class="lab-img-wrapper">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc?q=80&w=1955&auto=format&fit=crop"
-                            alt="Abstract fluid forms" class="lab-img">
-                        <div class="lab-overlay"></div>
-                    </div>
-                    <div class="lab-info">
-                        <span class="lab-tag">Architecture</span>
-                        <h3 class="lab-project-title">Adaptive Habitat</h3>
-                    </div>
-                </div>
-
-                <!-- Project 5 (Tall) -->
-                <div class="lab-card tall">
-                    <div class="lab-img-wrapper">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1518640165980-d3e0e2aa6c1e?q=80&w=1974&auto=format&fit=crop"
-                            alt="Abstract blue lines" class="lab-img">
-                        <div class="lab-overlay"></div>
-                    </div>
-                    <div class="lab-info">
-                        <span class="lab-tag">Social Impact</span>
-                        <h3 class="lab-project-title">Urban Mycelium</h3>
-                    </div>
-                </div>
-
-                <!-- Project 6 (Tall) -->
-                <div class="lab-card tall">
-                    <div class="lab-img-wrapper">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1506259091721-347f798196d4?q=80&w=2069&auto=format&fit=crop"
-                            alt="Abstract light streaks" class="lab-img">
-                        <div class="lab-overlay"></div>
-                    </div>
-                    <div class="lab-info">
-                        <span class="lab-tag">Digital Systems</span>
-                        <h3 class="lab-project-title">Data Monolith</h3>
-                    </div>
-                </div>
-
-            </section>
-
-            <!-- CTA Section -->
-            <section class="lab-cta">
-                <div class="lab-cta-content">
-                    <h2 class="lab-cta-title">Have a visionary project in mind?</h2>
-                    <p class="lab-cta-desc">
-                        Let's collaborate to build the future of digital and physical spaces through experimental
-                        design.
-                    </p>
-                    <a href="mailto:ashanj1@outlook.com" class="lab-cta-btn">Get in Touch</a>
-                </div>
-            </section>
-
-            <!-- Footer -->
-            <footer>
-                <div class="footer-links">
-                    <div class="social-icons">
-                        <a href="https://x.com/AJeevanathan"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.linkedin.com/in/ashan-jeevanathan/"><i class="fab fa-linkedin"></i></a>
-                        <a href="mailto:ashanj1@outlook.com"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-                <div class="copyright">
-                    © 2026 Ashan Jeevanathan. All rights reserved.
-                </div>
-            </footer>
-
-        </div>
+        <footer>
+            <div class="footer-links">
+                <a href="https://x.com/AJeevanathan">Twitter</a>
+                <a href="https://www.linkedin.com/in/ashan-jeevanathan/">LinkedIn</a>
+                <a href="mailto:ashanj1@outlook.com">Email</a>
+            </div>
+            <div class="copyright">&copy; 2026 Ashan Jeevanathan.</div>
+        </footer>
     </div>
-
-    <!-- Scripts -->
     <script src="./script.js"></script>
 </body>
 
